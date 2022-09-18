@@ -36,6 +36,15 @@ app.get('/api/:rapName', (req, res) => {
     
 });
 
+// app.post('/addRapper', (req, res) => {
+//     db.collection('rappers').insertOne({stageName: req.body.stageName, birthName: req.body.birthName, likes: 0})
+//         .then(res => {
+//             console.log('Rapper Added');
+//             res.redirect('/');
+//         })
+//         .catch(err => console.error(err));
+// })
+
 
 app.listen(process.env.PORT || PORT, () => {
     console.log(`Server running on port: ${PORT}`)
