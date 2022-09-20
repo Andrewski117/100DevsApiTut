@@ -1,0 +1,28 @@
+﻿
+<html lang="en">
+<body>
+
+
+<h1>Current Rappers</h1>
+<ul class="rappers">
+    <% for(let i = 0; i < info.length; i++) {%>
+    <li class="rapper">
+        <span><%= info[i].stageName %></span>
+        <span><%= info[i].birthName %></span>
+        <span><%= info[i].likes %></span>
+<!--        insert thumbs up and trash icons here-->
+    </li>
+    <% } %>
+</ul>
+
+<h2>Add A Rapper:</h2>
+<form action="/addRapper" method="post">
+    <input type="text" placeholder="Stage Name" name="stageName">
+    <input type="text" placeholder="Birth Name" name="birthName">
+    <input type="submit">
+</form>
+
+<script src="main.js"></script>
+
+</body>
+</html>
